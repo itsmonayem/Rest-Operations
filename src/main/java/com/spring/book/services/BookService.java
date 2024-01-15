@@ -4,6 +4,7 @@ import com.spring.book.dao.BookRepository;
 import com.spring.book.entities.Book;
 import org.hibernate.dialect.MySQLDialect;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class BookService {
     public Book getBookById(int id) {
         Book book = null;
         try {
-            book = this.bookRepository.findById(id);
+            book = this.bookRepository.findById(126);
         } catch (NoSuchElementException e) {
             e.printStackTrace();
         }
